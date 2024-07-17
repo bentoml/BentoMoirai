@@ -21,7 +21,7 @@ $ bentoml serve .
 
 2024-01-08T09:07:28+0000 [INFO] [cli] Prometheus metrics for HTTP BentoServer from "service:Moirai" can be accessed at http://localhost:3000/metrics.
 2024-01-08T09:07:28+0000 [INFO] [cli] Starting production HTTP BentoServer from "service:Moirai" listening on http://localhost:3000 (Press CTRL+C to quit)
-Model resnet loaded device: cuda
+Model Moirai loaded device: cuda
 ```
 
 The Service is accessible at [http://localhost:3000](http://localhost:3000/). You can interact with it using the Swagger UI or in other different ways:
