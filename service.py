@@ -1,6 +1,7 @@
 import typing as t
 import numpy as np
 import pandas as pd
+from pathlib import Path
 
 import bentoml
 from bentoml.validators import DataframeSchema
@@ -48,8 +49,6 @@ class Moirai:
 
     @bentoml.api
     def forecast(self, df: t.Annotated[pd.DataFrame, DataframeSchema(orient="records")]) -> np.ndarray:
-        print(df)
-
         from gluonts.dataset.pandas import PandasDataset
         from gluonts.dataset.split import split
 
@@ -74,3 +73,9 @@ class Moirai:
         forecasts = predictor.predict(test_data.input)
         forecast = next(iter(forecasts))
         return forecast.samples
+
+
+    @bentoml.api
+    def forecast_csv(self, csv: Path) -> np.ndarray:
+        df = pd.read_csv(csv)
+        return self.forecast(df)
