@@ -1,3 +1,11 @@
+<div align="center">
+    <h1 align="center">Serving Moirai with BentoML</h1>
+</div>
+
+[Moirai](https://arxiv.org/abs/2402.02592), the Masked Encoder-based Universal Time Series Forecasting Transformer is a Large Time Series Model pre-trained on [LOTSA data](https://huggingface.co/datasets/Salesforce/lotsa_data). This is a BentoML example project, demonstrating how to build a forecasting inference API for time-series data using [Moirai-1.0-R-Large](https://huggingface.co/Salesforce/moirai-1.0-R-large).
+
+See [here](https://github.com/bentoml/BentoML/tree/main/examples) for a full list of BentoML example projects.
+
 ## Prerequisites
 
 - You have installed Python 3.8+ and `pip`. See the [Python downloads page](https://www.python.org/downloads/) to learn more.
